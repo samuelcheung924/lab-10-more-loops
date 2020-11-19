@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function countDown(start) {
+        console.log(start);
+
+        let nextNumber = start - 1; // let allows us to use a LOCAL VARIABLE!
+
+        if (nextNumber > 0) {
+          countDown(nextNumber); // recursive functions CALL THEMSELVES! (this is the function call)
+        } else {
+          console.log("HAPPY NEW YEAR!"); // this is our BASE CASE!
+        }
+      }
+
+      countDown(10); // initial function call gets our recursive function going...
+
+    </script>
+  </body>
+</html>
