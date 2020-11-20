@@ -1,9 +1,9 @@
-def hanoi(n,f,h,t):
+def hanoi(n,source,helper,target):
         if n==0:
             return
-        hanoi(n-1,f,t,h)
-        print("Move disk",n,"from ",f,"to ",t)
-        hanoi(n-1,h,f,t)
+        hanoi(n-1,source,target,helper)
+        print("Move disk",n,"from ",source,"to ",target)
+        hanoi(n-1,helper,source,target)
 
-    n = int(input("Enter the number of disks "))
-    hanoi(n,'A','B','c')
+n = int(input("Enter the number of disks\n"))
+hanoi(n,'A','B','C')
